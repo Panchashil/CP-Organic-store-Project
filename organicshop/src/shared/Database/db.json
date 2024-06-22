@@ -1,0 +1,57 @@
+{
+    "products": [
+      {
+        "id": "2",
+        "pname": "Keyboard",
+        "price": 500,
+        "company": "Intel"
+      },
+      {
+        "id": "3",
+        "pname": "Mouse",
+        "price": 3000,
+        "company": "Iball"
+      },
+      {
+        "id": "4",
+        "pname": "Adapter",
+        "price": 3000,
+        "company": "Dell"
+      },
+      {
+        "id": "6",
+        "pname": "Card Raeder",
+        "price": 500,
+        "company": "Toshiba"
+      },
+      {
+        "id": "7",
+        "pname": "Cable",
+        "price": 800,
+        "company": "Barathcables"
+      },
+      {
+        "id": "24a2",
+        "pname": "Coolers",
+        "price": "300",
+        "company": "rebon"
+      }
+    ],
+    "users": [
+      {
+        "id": "1",
+        "userID": "admin@gmail.com",
+        "userPass": "admin@123"
+      },
+      {
+        "id": "2",
+        "userID": "hero@gmail.com",
+        "userPass": "hero@123"
+      },
+      {
+        "id": "3",
+        "userID": "king@gmail.com",
+        "userPass": "king@123"
+      }
+    ]
+  }
