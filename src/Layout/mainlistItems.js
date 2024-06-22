@@ -18,7 +18,7 @@ export const mainListItems = (
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
-      <Link to="myslider" className='btn btn-primary' >Slider</Link> &nbsp;
+      <Link to="oil" className='btn btn-primary' >CardComp</Link> &nbsp;
     </ListItemButton>
     <ListItemButton>
       <ListItemIcon>
@@ -44,15 +44,23 @@ export const mainListItems = (
       </ListItemIcon>
       <Link to="ReactHooks" className='btn btn-danger' >ReactHooks</Link> &nbsp;
     </ListItemButton>
+    <ListItemButton>
+      <ListItemIcon>
+        <LayersIcon />
+      </ListItemIcon>
+      <Link to="/Logout" className='btn btn-danger' >Logout</Link> &nbsp;
+    </ListItemButton>
+    
   </React.Fragment>
+
 );
 
 export const secondaryListItems = (
   <React.Fragment>
     <ListSubheader component="div" inset>
-      Saved reports
+      Visit Again
     </ListSubheader>
-    <ListItemButton>
+    {/* <ListItemButton>
       <ListItemIcon>
         <AssignmentIcon />
       </ListItemIcon>
@@ -75,18 +83,14 @@ export const secondaryListItems = (
         <AssignmentIcon />
       </ListItemIcon>
       <Link to="FormValComp" className='btn btn-primary' >FormValComp</Link> &nbsp;
-    </ListItemButton>
+    </ListItemButton> */}
     {/* <ListItemButton>
       <ListItemIcon>
         <AssignmentIcon />
       </ListItemIcon>
-      <Link to="ProductAdd" className='btn btn-danger' >ProductAdd</Link> &nbsp;
-    </ListItemButton> */}
-    <ListItemButton>
-      <ListItemIcon>
-        <AssignmentIcon />
-      </ListItemIcon>
       <Link to="ProductDashboard" className='btn btn-danger' >CRUD</Link> &nbsp;
-    </ListItemButton>
+    </ListItemButton> */}
+  
+      
   </React.Fragment>
 );

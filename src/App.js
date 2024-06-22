@@ -1,13 +1,13 @@
 // import logo from './logo.svg';
 import './App.css';
 import FunctionComp from './components/FunctionComp';
-import ClassComp from './components/ClassComp';
+// import ClassComp from './components/ClassComp';
 import MyDetails from './components/MyDetails';
 import MethodEventComp from './components/MethodEvent';
 import SetStateComp from './components/SetStateComp';
 import ConditionRenComp from './components/ConditionRenComp';
 import MyImagesComp from './components/MyImages';
-import ParentComp from './components/ParentComp';
+// import ParentComp from './components/ParentComp';
 import ToggleImage from './Task/ToggleImage';
 import MultiImgComp from './Task/MultiImage';
 import MyCssComp from './components/MyCssComp';
@@ -42,7 +42,7 @@ function App() {
       {/* <SetStateComp /> */}
       {/* <ConditionRenComp /> */}
       {/* <MyImagesComp /> */}
-      <ParentComp />
+      {/* <ParentComp /> */}
       {/* <MyCssComp /> */}
       {/* <ClickCounterComp />
       <HoverCounterComp /> */}

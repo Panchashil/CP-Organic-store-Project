@@ -29,4 +29,4 @@ class MyImagesComp extends Component {
     }
 }
     
-    export default MyImagesComp
+    export default MyImagesComp   

@@ -30,16 +30,15 @@ const ProductDashboardComp = () => {
     return (
         <div>
             <h2>This is ProductDashboard Component</h2>
-            <Link to="/Maindashboard/ProductAdd" className='btn btn-primary' ><AddIcon /> &nbsp;ADD</Link>
+            {/* <Link to="/Maindashboard/ProductAdd" className='btn btn-primary' ><AddIcon /> &nbsp;ADD</Link> */}
             <Link to="/Logout"  className='btn btn-primary' style={{float:"right"}}>&nbsp;signout</Link><br />
-            
             <table className='table table-hover table-striped '>
                 <thead className='table-dark'><tr>
                     <th>S.no</th>
                     <th>ProductName</th>
                     <th>Price</th>
                     <th>Company</th>
-                    <th>Action</th>
+                    {/* <th>Action</th> */}
                 </tr>
 
                 </thead>
@@ -51,11 +50,10 @@ const ProductDashboardComp = () => {
                             <td>{val.price}</td>
                             <td>{val.company}</td>
                             <td>
-                            <Link to={`/Maindashboard/ProductUpdate/${val.id}`} className='btn btn-primary btn-sm' ><EditNoteOutlinedIcon /> </Link>
+                            {/* <Link to={`/Maindashboard/ProductUpdate/${val.id}`} className='btn btn-primary btn-sm' ><EditNoteOutlinedIcon /> </Link>
                                 <button type='button' onClick={()=>{DeleteProduct(val.id)}} className='btn btn-outline-success btn-sm'>
                                     <DeleteOutlineOutlinedIcon></DeleteOutlineOutlinedIcon>
-                                </button>
-                                
+                                </button> */}
                             </td>
                         </tr>
                 })}

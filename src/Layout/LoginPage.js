@@ -14,7 +14,6 @@ import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { useState } from 'react';
 import staticData from '../shared/constant/ConstantData';
 
 const theme = createTheme({
@@ -27,27 +26,25 @@ const theme = createTheme({
 
 const LoginPageComp = () => {
   const nav = useNavigate();
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = React.useState('');
+  const [password, setPassword] = React.useState('');
+  const [error, setError] = React.useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
 
-    let email = data.get('email');
-    let password = data.get('password');
-    axios.get('http://localhost:8888/user').then((res) => {
-      let usersData = res.data;
-      const user = usersData.find((val) => val.userId === email && val.userPass === password);
-      if (user) {
-        nav("/Maindashboard");
-        sessionStorage.setItem("user", email);
-      } else {
-        window.alert("Wrong UserId or Password");
-      }
-    }).catch((error) => {
-      console.error("There was an error logging in!", error);
-    });
+    let enteredEmail = data.get('email');
+    let enteredPassword = data.get('password');
+
+    // Check if the entered credentials match the admin credentials
+    if (enteredEmail === 'suresh@gmail.com' && enteredPassword === 'suresh@123') {
+      nav("/Maindashboard");
+      sessionStorage.setItem("user", enteredEmail);
+    } else {
+      setError("Wrong UserId or Password");
+      nav("/ProductUser");
+    }
   };
 
   return (
@@ -145,6 +142,11 @@ const LoginPageComp = () => {
               >
                 Sign In
               </Button>
+              {error && (
+                <Typography variant="body2" sx={{ color: 'red', mt: 2 }}>
+                  {error}
+                </Typography>
+              )}
               <Grid container>
                 <Grid item xs>
                   <Link href="#" variant="body2" sx={{ color: 'white' }}>

@@ -42,9 +42,9 @@ const RegisterPageComp = () => {
 
   return (
     <ThemeProvider theme={defaultTheme}>
-      <Grid container component="main" sx={{ height: '100vh', backgroundImage: `url(${staticData.mountain})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <Grid container component="main" sx={{ height: '100vh', backgroundImage: `url(${staticData.Organic5})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <CssBaseline />
-        <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square sx={{ margin: 'auto' }}>
+        <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square sx={{ margin: 'auto',backgroundColor: 'transparent' }}>
           <Box
             sx={{
               my: 8,
@@ -52,6 +52,9 @@ const RegisterPageComp = () => {
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
+              backgroundColor: 'rgba(25, 118, 210, 0.4)', // Primary color with opacity
+              padding: 3,
+              borderRadius: 2,
             }}
           >
             <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
