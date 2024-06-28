@@ -1,0 +1,68 @@
+/* App.module.css */
+.Homepage {
+    font-family: Arial, sans-serif;
+  }
+  
+  .header {
+    background-color: #f8f9fa;
+    padding: 10px 0;
+  }
+  
+  .navbar-brand img {
+    height: 60px;
+  }
+  
+  .marquee {
+    background-color: #f8f9fa;
+    padding: 10px;
+    font-size: 1.2em;
+    color: #333;
+  }
+  
+  .carousel-inner img {
+    height: 500px;
+    object-fit: cover;
+  }
+  
+  .container .row.align-items-center {
+    padding: 20px 0;
+  }
+  
+  .blockquote {
+    font-size: 1.2em;
+    color: #555;
+  }
+  
+  .image-album .img-fluid {
+    margin-bottom: 20px;
+  }
+  
+  /* .footer-container {
+    background-color: #f8f9fa;
+  } */
+  
+  /* .payment-methods img {
+    margin: 0 10px;
+  } */
+  
+  /* .footer-bottom {
+    background-color: #343a40;
+    color: #fff;
+  } */
+  
+  .separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .separator span {
+    flex: 1;
+    height: 1px;
+    background-color: #fff;
+  }
+  
+  .separator img {
+    margin: 0 10px;
+  }
+  
