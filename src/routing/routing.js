@@ -17,7 +17,7 @@ import LoginPage from "../Layout/LoginPage";
 // import SignOutComp from "../Layout/Signout";
 import ProtectedRoutingComp from "./ProtectedRoutingComp";
 import RegisterPageComp from "../Layout/RegisterPageComp";
-import LogoutPageComp from "../Layout/LogoutPageComp";
+//import LogoutPageComp from "../Layout/LogoutPageComp";
 // import ProductUserComp from "../CRUD/ProductDashUser";
 import CardComp from "../List/OilPageComp";
 import PulsesPageComp from "../List/PulsesPageComp";
@@ -30,7 +30,7 @@ import ContactPageComp from "../Layout/ContactPageComp";
 import AboutPageComp from "../Layout/AboutPageComp";
 import BestofusPageComp from "../List/BestOfUsPageComp";
 import AdminAddComp from "../CRUD/AdminAddcomp";
-import AddtoCart from "../List/AddtoCart";
+import CartPageComp from "../List/CartPageComp";
 import ManageUsersComp from "../CRUD/ManageUsersComp";
 // import AdminUpdateComp from "../CRUD/AdminUpdateComp";
 
@@ -40,7 +40,7 @@ const router = createBrowserRouter([
     
     { path: "Login", element: <LoginPage /> },
     { path: "Register", element: <RegisterPageComp /> },
-    { path: "Logout", element: <LogoutPageComp /> },
+    // { path: "Logout", element: <LogoutPageComp /> },
     // {path:"ProductDashboard",element:<ProductDashboardComp/>},
     { path: "ContactPage", element: <ContactPageComp /> },
     { path: "AboutPage", element: <AboutPageComp /> },
@@ -92,7 +92,7 @@ const router = createBrowserRouter([
             { path: "VirtualDom", element: <VirtualDomComp /> },
             { path: "Oil", element: <CardComp /> },
             { path: "UseState", element: <UseStateHookComp /> },
-            { path: "cart", element: <AddtoCart /> },
+            { path: "cart", element: <CartPageComp /> },
             {
                 path: "ReactHooks", element: <ReactHooksComp />, children: [
                     { path: "UseState", element: <UseStateHookComp /> },

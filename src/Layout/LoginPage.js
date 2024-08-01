@@ -39,10 +39,10 @@ const LoginPageComp = () => {
     return emailPattern.test(email);
   };
 
-  const validatePassword = (password) => {
-    const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[@]).{5,}$/;
-    return passwordPattern.test(password);
-  };
+  // const validatePassword = (password) => {
+  //   const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[@]).{5,}$/;
+  //   return passwordPattern.test(password);
+  // };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -52,18 +52,18 @@ const LoginPageComp = () => {
     let enteredPassword = data.get('password');
 
     let validEmail = validateEmail(enteredEmail);
-    let validPassword = validatePassword(enteredPassword);
+    // let validPassword = validatePassword(enteredPassword);
 
     if (!enteredEmail || !validEmail) {
       setEmailError(!enteredEmail ? "This field is required" : "Invalid email format");
       return;
     }
 
-    if (!enteredPassword || !validPassword) {
+    if (!enteredPassword ) {
       setPasswordError(
         !enteredPassword
           ? "This field is required"
-          : "Password must contain at least 5 characters, including uppercase, lowercase letters, and @"
+          : ""
       );
       return;
     }
@@ -98,13 +98,7 @@ const LoginPageComp = () => {
   const handleBlur = (field) => {
     if (field === 'email' && (!email || !validateEmail(email))) {
       setEmailError(!email ? "This field is required" : "Invalid email format");
-    } else if (field === 'password' && (!password || !validatePassword(password))) {
-      setPasswordError(
-        !password
-          ? "This field is required"
-          : "Password must contain at least 5 characters, including uppercase, lowercase letters, and @"
-      );
-    }
+    } 
   };
 
   return (
@@ -292,6 +286,7 @@ const LoginPageComp = () => {
               />
              
               <Button
+              id='login'
                 type="submit"
                 fullWidth
                 variant="contained"

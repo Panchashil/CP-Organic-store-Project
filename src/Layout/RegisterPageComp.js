@@ -386,20 +386,18 @@ const RegisterPageComp = () => {
               />
 
               <Button
+                 id='signup'
                 type="submit"
                 fullWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2, bgcolor: 'primary.main' }}
               >
                 Register
-              </Button>
-              <Grid container>
-                <Grid item>
-                  <Link href="/Login" variant="body2" sx={{ color: 'primary.main' }}>
-                    {"Already have an account? Sign In"}
-                  </Link>
-                </Grid>
-              </Grid>
+              </Button> 
+              <Link to="/Login" variant="body2" sx={{ color: 'primary.main' }}>
+      Already have an account? Sign In
+    </Link>
+                
             </Box>
           </Box>
         </Grid>

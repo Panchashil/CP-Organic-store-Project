@@ -1,13 +1,10 @@
-// App.js
 
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import staticData from "../shared/constant/ConstantData"
 import { AppBar, Toolbar, Typography, Button, Box } from '@mui/material';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
-import { Height } from '@mui/icons-material';
-import cherry from '../shared/Fruit-images/Cherries.jpg'
+import 'bootstrap/dist/css/bootstrap.min.css'; 
 import { Link } from 'react-router-dom';
 
 const App = () => {
@@ -18,7 +15,7 @@ const App = () => {
         { src: staticData.blueberry, alt: 'images1' },
         { src: staticData.cherry, alt: 'images1' },
         { src: staticData.greenapple, alt: 'images1' },
-        // {src: staticData.almondoil , alt: 'images1'}
+       
     ]
 
 
@@ -272,10 +269,6 @@ const App = () => {
                         </div>
                     </div>
 
-
-
-
-
                     <div className="col-8">
                         <p className="text-center" style={{ color: 'black', fontSize: "20px" }} >Discover the crisp sweetness of freshly picked produce, cultivated with care to preserve nutrients and flavor. From biodegradable household essentials that minimize environmental impact to natural remedies that enhance your everyday wellness, every item is a testament to our commitment to holistic living. By partnering with local growers and makers who share our values, we ensure that each purchase supports communities and promotes ethical practices. Join us in embracing a lifestyle that honors both personal vitality and planetary health, as we strive towards a future where every choice leaves a positive footprint on the world we cherish.</p>
                     </div>
@@ -310,9 +303,6 @@ const App = () => {
                     </div>
                 </div>
             </div>
-
-
-
 
             <footer className="py-4 bg-white">
                 <div className="container-fluid mt-2 text-center">

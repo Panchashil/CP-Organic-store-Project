@@ -55,9 +55,7 @@ export const mainListItems = (
       </ListItemButton>
       <ListItemButton>
         <ListItemIcon>
-          <Link to="cart">
-            <ShoppingCartIcon />
-          </Link>
+            <BarChartIcon />
         </ListItemIcon>
         <Link to="Vegetables" className='btn btn-danger'>Vegetables</Link> &nbsp;
       </ListItemButton>
