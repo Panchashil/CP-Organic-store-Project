@@ -3,9 +3,6 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
-import MuiLink from '@mui/material/Link';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
@@ -39,10 +36,10 @@ const LoginPageComp = () => {
     return emailPattern.test(email);
   };
 
-  // const validatePassword = (password) => {
-  //   const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[@]).{5,}$/;
-  //   return passwordPattern.test(password);
-  // };
+  const validatePassword = (password) => {
+    const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[@]).{5,}$/;
+    return passwordPattern.test(password);
+  };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -51,20 +48,22 @@ const LoginPageComp = () => {
     let enteredEmail = data.get('email');
     let enteredPassword = data.get('password');
 
+    // Check if email or password is empty
+    if (!enteredEmail && !enteredPassword) {
+      alert("Please enter both email and password");
+      return;
+    }
+
     let validEmail = validateEmail(enteredEmail);
-    // let validPassword = validatePassword(enteredPassword);
+    let validPassword = validatePassword(enteredPassword);
 
     if (!enteredEmail || !validEmail) {
       setEmailError(!enteredEmail ? "This field is required" : "Invalid email format");
       return;
     }
 
-    if (!enteredPassword ) {
-      setPasswordError(
-        !enteredPassword
-          ? "This field is required"
-          : ""
-      );
+    if (!enteredPassword) {
+      setPasswordError("This field is required");
       return;
     }
 
@@ -98,7 +97,9 @@ const LoginPageComp = () => {
   const handleBlur = (field) => {
     if (field === 'email' && (!email || !validateEmail(email))) {
       setEmailError(!email ? "This field is required" : "Invalid email format");
-    } 
+    } else if (field === 'password' && !password) {
+      setPasswordError("This field is required");
+    }
   };
 
   return (
@@ -284,9 +285,7 @@ const LoginPageComp = () => {
                   style: { color: 'grey' }, // Label color
                 }}
               />
-             
               <Button
-              id='login'
                 type="submit"
                 fullWidth
                 variant="contained"
@@ -301,13 +300,15 @@ const LoginPageComp = () => {
               )}
               <Grid container>
                 <Grid item xs>
-                  
+
                 </Grid>
-                <center><Grid item>
-                  <Link to="/Register" variant="body2" style={{ color: theme.palette.primary.main }}>
-                    {"Don't have an account? Register"}
-                  </Link>
-                </Grid></center> 
+                <center>
+                  <Grid item>
+                    <Link to="/Register" variant="body2" style={{ color: theme.palette.primary.main }}>
+                      {"Don't have an account? Register"}
+                    </Link>
+                  </Grid>
+                </center>
               </Grid>
             </Box>
           </Box>
@@ -318,3 +319,5 @@ const LoginPageComp = () => {
 };
 
 export default LoginPageComp;
+
+
